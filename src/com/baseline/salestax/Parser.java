@@ -10,7 +10,7 @@ public class Parser {
         this.input = input;
     }
 
-    public boolean isBasic() {
+    public boolean isNotFoodOrBookOrMedicine() {
         if(!(isBook() || isFood() || isMedicine() )){
             return true;
         }
@@ -57,4 +57,5 @@ public class Parser {
     public double extractPrice() {
         return Double.parseDouble(input.substring(input.indexOf(" at ") + 4));
     }
+
 }

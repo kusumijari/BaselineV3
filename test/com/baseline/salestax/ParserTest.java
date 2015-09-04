@@ -12,28 +12,28 @@ public class ParserTest {
     public void shouldReturnTrueIfTheItemIsABook() {
         Parser parser = new Parser("1 book");
 
-        assertFalse(parser.isBasic());
+        assertFalse(parser.isNotFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemIsAChocolate() {
         Parser parser = new Parser("1 chocolate bar");
 
-        assertFalse(parser.isBasic());
+        assertFalse(parser.isNotFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemContainsChocolates() {
         Parser parser = new Parser("1 bar of chocolates");
 
-        assertFalse(parser.isBasic());
+        assertFalse(parser.isNotFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemContainsPills() {
         Parser parser = new Parser("1 packet of pills");
 
-        assertFalse(parser.isBasic());
+        assertFalse(parser.isNotFoodOrBookOrMedicine());
     }
 
     @Test
