@@ -14,7 +14,6 @@ public class Parser {
         if((input.split(" ")[0]).matches("[0-9]+")) {
             return true;
         }
-
         return false;
     }
 
@@ -52,5 +51,9 @@ public class Parser {
             return true;
         }
         return false;
+    }
+
+    public int extractQuantity() {
+        return Integer.parseInt(input.split(" ")[0]);
     }
 }

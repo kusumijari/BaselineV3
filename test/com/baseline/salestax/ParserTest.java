@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ParserTest {
 
@@ -47,5 +48,12 @@ public class ParserTest {
         Parser parser = new Parser("1 imported box of chocolates");
 
         assertTrue(parser.isImported());
+    }
+
+    @Test
+    public void shouldReturnTheQuantity() {
+        Parser parser = new Parser("1 book at 12.49");
+
+        assertEquals(1, parser.extractQuantity());
     }
 }
