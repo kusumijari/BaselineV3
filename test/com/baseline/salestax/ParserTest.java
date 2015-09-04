@@ -42,5 +42,10 @@ public class ParserTest {
         assertFalse(parser.isBasic());
     }
 
+    @Test
+    public void shouldReturnTrueifTheItemIsImported() {
+        Parser parser = new Parser("1 imported box of chocolates");
 
+        assertTrue(parser.isImported());
+    }
 }

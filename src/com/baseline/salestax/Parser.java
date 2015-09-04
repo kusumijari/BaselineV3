@@ -45,4 +45,11 @@ public class Parser {
         }
         return false;
     }
+
+    public boolean isImported() {
+        if(input.contains("imported")) {
+            return true;
+        }
+        return false;
+    }
 }
