@@ -56,4 +56,11 @@ public class ParserTest {
 
         assertEquals(1, parser.extractQuantity());
     }
+
+    @Test
+    public void shouldReturnTheItemName() {
+        Parser parser = new Parser("1 book at 12.49");
+
+        assertEquals("book", parser.extractItemaName());
+    }
 }

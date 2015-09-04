@@ -56,4 +56,8 @@ public class Parser {
     public int extractQuantity() {
         return Integer.parseInt(input.split(" ")[0]);
     }
+
+    public String extractItemaName() {
+        return input.substring(input.indexOf(" ") + 1, input.indexOf(" at "));
+    }
 }
