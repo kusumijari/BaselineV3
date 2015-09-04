@@ -13,4 +13,11 @@ public class ParserTest {
         assertTrue(parser.isValid());
     }
 
+    @Test
+    public void shouldReturnTrueIfTheItemIsABook() {
+        Parser parser = new Parser("1 book");
+
+        assertTrue(parser.isBook());
+    }
+
 }

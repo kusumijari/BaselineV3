@@ -16,6 +16,12 @@ public class Parser {
         }
 
         return false;
+    }
 
+    public boolean isBook() {
+        if(input.contains("book")){
+            return true;
+        }
+        return false;
     }
 }
