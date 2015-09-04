@@ -10,13 +10,6 @@ public class Parser {
         this.input = input;
     }
 
-    public boolean isValid() {
-        if((input.split(" ")[0]).matches("[0-9]+")) {
-            return true;
-        }
-        return false;
-    }
-
     public boolean isBasic() {
         if(!(isBook() || isFood() || isMedicine() )){
             return true;
