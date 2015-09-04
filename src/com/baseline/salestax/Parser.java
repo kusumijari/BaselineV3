@@ -10,8 +10,8 @@ public class Parser {
         this.input = input;
     }
 
-    public boolean isNotFoodOrBookOrMedicine() {
-        if(!(isBook() || isFood() || isMedicine() )){
+    public boolean isFoodOrBookOrMedicine() {
+        if((isBook() || isFood() || isMedicine() )){
             return true;
         }
         return false;

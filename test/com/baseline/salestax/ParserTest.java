@@ -2,7 +2,6 @@ package com.baseline.salestax;
 
 import org.junit.Test;
 
-import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
@@ -12,28 +11,28 @@ public class ParserTest {
     public void shouldReturnTrueIfTheItemIsABook() {
         Parser parser = new Parser("1 book");
 
-        assertFalse(parser.isNotFoodOrBookOrMedicine());
+        assertTrue(parser.isFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemIsAChocolate() {
         Parser parser = new Parser("1 chocolate bar");
 
-        assertFalse(parser.isNotFoodOrBookOrMedicine());
+        assertTrue(parser.isFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemContainsChocolates() {
         Parser parser = new Parser("1 bar of chocolates");
 
-        assertFalse(parser.isNotFoodOrBookOrMedicine());
+        assertTrue(parser.isFoodOrBookOrMedicine());
     }
 
     @Test
     public void shouldReturnTrueIfTheItemContainsPills() {
         Parser parser = new Parser("1 packet of pills");
 
-        assertFalse(parser.isNotFoodOrBookOrMedicine());
+        assertTrue(parser.isFoodOrBookOrMedicine());
     }
 
     @Test
@@ -63,4 +62,5 @@ public class ParserTest {
 
         assertEquals(12.49, parser.extractPrice(), 0.05);
     }
+
 }
