@@ -25,6 +25,14 @@ public class Parser {
         return false;
     }
 
+
+    public boolean isImported() {
+        if(input.contains("imported")) {
+            return true;
+        }
+        return false;
+    }
+
     private boolean isBook() {
         if(input.contains("book")) {
             return true;
@@ -41,13 +49,6 @@ public class Parser {
 
     private boolean isMedicine() {
         if(input.contains("pills")){
-            return true;
-        }
-        return false;
-    }
-
-    public boolean isImported() {
-        if(input.contains("imported")) {
             return true;
         }
         return false;
