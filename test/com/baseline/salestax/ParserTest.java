@@ -63,4 +63,11 @@ public class ParserTest {
         assertEquals(12.49, parser.extractPrice(), 0.05);
     }
 
+    @Test
+    public void shouldReturnTrueIfAnItemIsImportedAndFoodOrBookOrMedicine() {
+        Parser parser = new Parser("1 imported box of chocolates");
+
+        assertTrue(parser.isImportedAndIsFoodOrBookOrMedicine());
+    }
+
 }

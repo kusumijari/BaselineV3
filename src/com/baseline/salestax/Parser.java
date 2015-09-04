@@ -58,4 +58,10 @@ public class Parser {
         return Double.parseDouble(input.substring(input.indexOf(" at ") + 4));
     }
 
+    public boolean isImportedAndIsFoodOrBookOrMedicine() {
+        if(isFoodOrBookOrMedicine() && isImported()){
+            return true;
+        }
+        return false;
+    }
 }
