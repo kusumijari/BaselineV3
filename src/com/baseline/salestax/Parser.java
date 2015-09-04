@@ -53,4 +53,8 @@ public class Parser {
     public String extractItemaName() {
         return input.substring(input.indexOf(" ") + 1, input.indexOf(" at "));
     }
+
+    public double extractPrice() {
+        return Double.parseDouble(input.substring(input.indexOf(" at ") + 4));
+    }
 }
