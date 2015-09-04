@@ -19,7 +19,14 @@ public class Parser {
     }
 
     public boolean isBook() {
-        if(input.contains("book")){
+        if(input.contains("book")) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isFood() {
+        if(input.contains("chocolate")) {
             return true;
         }
         return false;
