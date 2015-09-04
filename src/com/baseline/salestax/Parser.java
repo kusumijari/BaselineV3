@@ -31,4 +31,11 @@ public class Parser {
         }
         return false;
     }
+
+    public boolean isMedicine() {
+        if(input.contains("pills")){
+            return true;
+        }
+        return false;
+    }
 }

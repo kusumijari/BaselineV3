@@ -33,4 +33,11 @@ public class ParserTest {
 
         assertTrue(parser.isFood());
     }
+
+    @Test
+    public void shouldReturnTrueIfTheItemContainsPills() {
+        Parser parser = new Parser("1 packet of pills");
+
+        assertTrue(parser.isMedicine());
+    }
 }
