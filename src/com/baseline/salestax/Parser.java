@@ -26,7 +26,7 @@ public class Parser {
     }
 
     public boolean isFood() {
-        if(input.contains("chocolate")) {
+        if(input.contains("chocolate") || input.contains("chocolates")) {
             return true;
         }
         return false;

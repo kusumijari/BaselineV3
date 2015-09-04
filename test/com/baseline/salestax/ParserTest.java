@@ -26,4 +26,11 @@ public class ParserTest {
 
         assertTrue(parser.isFood());
     }
+
+    @Test
+    public void shouldReturnTrueIfTheItemContainsChocolates() {
+        Parser parser = new Parser("1 bar of chocolates");
+
+        assertTrue(parser.isFood());
+    }
 }
